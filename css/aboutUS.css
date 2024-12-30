@@ -205,3 +205,137 @@
         font-size: 0.9rem;
     }
 }
+ /*SERVICIOS---------------------------------*/
+
+/* Estilos de la sección de servicios */
+.servicios {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.Services-title h2 {
+    font-size: 1rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.Services-title h3 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+/* Contenedor de tarjetas */
+.cards-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Estilos generales de las tarjetas */
+@keyframes hoverEffect {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-8px);
+    }
+  }
+  
+  .card {
+    background-color: var(--tarjetas);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--black);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    animation: fadeInUp 2s ease-out forwards; /* Animación de entrada */
+  }
+  
+  /* Efecto hover activado después de la animación inicial */
+  .card:hover {
+    animation: hoverEffect 0.3s ease forwards; /* Animación de hover */
+  }
+
+/* Imagen y círculo */
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 180px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.icon-circle {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.icon-circle:hover{
+    background-color: var(--black);
+}
+
+
+/* Contenido de la tarjeta */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.read-more {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: #2ecc71;
+}
+
+.language-selector {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+/**/
+.language-selector .icon img {
+    width: 30px;  /* Ajusta el tamaño de la bandera */
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.language-selector .icon img:hover {
+    opacity: 0.8;
+}

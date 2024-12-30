@@ -231,7 +231,6 @@ document.addEventListener("DOMContentLoaded", () => {
   handleScroll();
 });
 
-/*
 document.getElementById('language-toggle').addEventListener('click', function(event) {
     event.preventDefault();
     
@@ -242,4 +241,4 @@ document.getElementById('language-toggle').addEventListener('click', function(ev
         // Si estás en el archivo index2.html (Inglés), redirige a index.html (Español)
         window.location.href = 'index.html';
     }
-});*/
+});
