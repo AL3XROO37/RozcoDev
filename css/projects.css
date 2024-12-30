@@ -267,7 +267,7 @@
         max-width: 90%;
         /* Reduce el ancho del modal */
     }
-}
+}/**/
 
 /* Responsividad para pantallas de 480px o menos (móviles) */
 @media (max-width: 480px) {

@@ -29,7 +29,7 @@
     opacity: 0;
     transform: translateX(+150px);
     transition: opacity 1.7s ease-in-out, transform 1.7s cubic-bezier(0.42, 0, 0.58, 1); /* Transición más suave y larga */
-  }
+  }/**/
   
   .face-right.show {
     opacity: 1;

@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
+//hola como estas
 // Obtener elementos del DOM
 const projectCards = document.querySelectorAll('.project-card');
 const modal = document.getElementById('project-modal');
