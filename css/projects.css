@@ -1,0 +1,321 @@
+.projects {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    color: var(--primary);
+}
+
+/* Estilos para filtros minimalistas */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    color: var(--plateado);
+    /* Color gris para botones */
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.filter-btn.active {
+    color: var(--primary);
+    /* Color verde del texto activo */
+    font-weight: bold;
+}
+
+.filter-btn.active::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    /* Espaciado del subrayado */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary);
+    /* Subrayado verde */
+}
+
+.filter-btn:hover {
+    color: var(--primary);
+    /* Cambia a verde al pasar el mouse */
+}
+
+
+/* Grid de proyectos */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 0 2rem;
+}
+
+.project-card {
+    background-color: var(--background);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 212, 255, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.projects h2 {
+    font-size: 1rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.projects h3 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.project-card h3 {
+    margin: 1rem;
+    font-size: 1.4rem;
+    color: var(--primary);
+}
+
+.project-card p {
+    margin: 0 1rem 1rem;
+    color: var(--black);
+    font-size: 0.95rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Número máximo de líneas visibles */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Añade "..." al final del texto truncado */
+    white-space: normal;
+}
+
+.tools {
+    font-size: 0.85rem;
+    margin: 0 1rem 1.2rem;
+    color: var(--cards-text);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 212, 255, 0.3);
+}
+
+
+/*------------------MODAL-------------------*/
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.modal p {
+    color: black;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 700px;
+    max-height: 90vh; /* Máxima altura del modal para mantenerlo en la ventana */
+    overflow-y: auto; /* Permitir scroll vertical si el contenido es más grande */
+    text-align: center;
+    position: relative;
+}
+
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background: var(--primary);
+}
+
+
+/* Responsividad para pantallas de 1200px o menos */
+@media (max-width: 1200px) {
+    .projects {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .project-grid {
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .project-card img {
+        height: 160px;
+    }
+
+    .project-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsividad para pantallas de 768px o menos (tabletas) */
+@media (max-width: 768px) {
+    .projects {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+        /* Los botones de filtro se ajustan en varias filas */
+        gap: 1rem;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .project-card img {
+        height: 140px;
+    }
+
+    .project-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .project-card p {
+        font-size: 0.85rem;
+    }
+
+    .modal-content {
+        padding: 1rem;
+        max-width: 90%;
+        /* Reduce el ancho del modal */
+    }
+}
+
+/* Responsividad para pantallas de 480px o menos (móviles) */
+@media (max-width: 480px) {
+    .projects {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .filters {
+        flex-direction: column;
+        /* Los botones de filtro se apilan verticalmente */
+        gap: 0.8rem;
+    }
+
+    .filter-btn {
+        font-size: 0.8rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        /* Una sola columna en móviles */
+    }
+
+    .project-card img {
+        height: 120px;
+    }
+
+    .project-card h3 {
+        font-size: 1rem;
+    }
+
+    .project-card p {
+        font-size: 0.8rem;
+    }
+
+    .modal-content {
+        padding: 0.8rem;
+        max-width: 95%;
+    }
+
+    .carousel img {
+        max-height: 250px;
+        /* Reducir la altura máxima de la imagen en móviles */
+    }
+
+    .prev-btn,
+    .next-btn {
+        padding: 0.3rem 0.6rem;
+        font-size: 1rem;
+    }
+}

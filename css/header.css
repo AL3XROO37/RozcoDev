@@ -1,0 +1,277 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Variables globales para los temas */
+:root {
+    /* Colores comunes */
+    --primary: #38b6ff;
+    --secondary: #0077b6;
+    --gray: #f6f6f6;
+    --footer: #f2f2f2;
+}
+
+/* Tema claro (por defecto) */
+body.light {
+    --background-color: #efefef;
+    --text-color: #151515;
+    --header: #f8f9fa;
+    --plateado: #4e4e4e;
+    --black: #dcdcdd;
+    --white:#151515;
+    --tarjetas: #fff;
+    --background: #1a1f2b;
+    --cards-text: #c3e6f5;
+}
+
+/* Tema oscuro */
+body.dark {
+    --background-color: #151515;
+    --text-color: #efefef;
+    --header: #222222;
+    --plateado: #dcdcdd;
+    --black: #151515;
+    --white:#dcdcdd;
+    --tarjetas:#000000;
+    --background: #D9D9D9;
+    --cards-text: #1d6375;
+}
+
+body.light .light-logo {
+    display: block;
+}
+
+body.dark .dark-logo {
+    display: block;
+}
+
+/* Aplicar colores al body */
+body {
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Estilo básico del scroll */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho del scrollbar vertical */
+    height: 10px; /* Alto del scrollbar horizontal */
+}
+
+/* Estilo del track (parte de fondo del scrollbar) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo del handle (parte del scrollbar que se mueve) */
+::-webkit-scrollbar-thumb {
+    background: var(--primary); /* Color del handle */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 2px solid #f1f1f1; /* Bordes suaves alrededor del handle */
+}
+
+/* Efecto al pasar el mouse por encima */
+::-webkit-scrollbar-thumb:hover {
+    background: #45a049; /* Color más oscuro del handle al pasar el mouse */
+}
+
+/* Scroll horizontal */
+::-webkit-scrollbar-horizontal {
+    height: 8px; /* Alto del scrollbar horizontal */
+}
+
+.header-inicio {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--header);
+    padding: 16px 5%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 120px;
+    height: auto;
+    margin-left: -20%;
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Centrar los elementos */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
+}
+
+.navbar a {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    margin: 0 15px; /* Ajuste del margen para mantener espacio entre los elementos */
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Evitar que los enlaces se corten si son largos */
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a:hover {
+    color: var(--primary);
+}
+
+.navbar a.active {
+    color: var(--primary);
+}
+
+
+#menu-icon {
+    font-size: 35px;
+    color: var(--black);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+/* Redes sociales */
+.social-icons {
+    display: flex;
+    gap: 10px; /* Espaciado entre íconos */
+    align-items: center;
+}
+
+.social-icons .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: var(--primary); /* Color del ícono */
+    font-size: 20px; /* Tamaño del ícono */
+    text-decoration: none; /* Sin subrayado */
+    transition: all 0.3s ease;
+}
+
+.social-icons .icon:hover {
+    transform: scale(1.5); /* Efecto de agrandar */
+}
+
+#theme-toggle {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: var(--secondary);
+}
+
+
+@media (max-width: 1299px) {
+    header {
+        padding: 14px 5%;
+        transition: 0.2s;
+    }
+
+    .navbar a {
+        padding: 5px 0;
+        margin: 0 20px;
+    }
+}
+
+/* Ajuste para pantallas pequeñas (móviles) */
+@media (max-width: 1090px) {
+    header {
+        padding: 14px 7%;
+        transition: 0.2s;
+    }
+
+    #menu-icon {
+        display: block;
+        color: var(--white);
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        background: var(--primary);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Alinear enlaces a la izquierda */
+        border-radius: 10px;
+        transition: all 0.50s ease;
+        padding: 10px; /* Añadir relleno para dar espacio a los enlaces */
+    }
+
+    .navbar a {
+        display: block;
+        margin: 12px 0;
+        padding: 10px 25px; /* Añadir relleno para hacer más fáciles de tocar */
+        transition: all 0.50s ease;
+        font-size: 14px; /* Ajustar el tamaño de fuente para móviles */
+    }
+
+    .navbar a:hover {
+        color: var(--black);
+        transform: translateY(5px);
+    }
+
+    .navbar a.active {
+        color: var(--black);
+    }
+
+    .navbar.open {
+        right: 2%;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (móviles pequeños) */
+@media (max-width: 420px) {
+    .navbar {
+        width: 230px; /* Ajustar el ancho del menú en móviles pequeños */
+    }
+
+    .navbar a {
+        font-size: 12px; /* Reducir tamaño de fuente para ahorrar espacio */
+    }
+
+    .logo-img {
+        width: 70px; /* Hacer el logo más pequeño para pantallas pequeñas */
+        height: auto;
+    }
+
+}

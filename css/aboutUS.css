@@ -1,0 +1,207 @@
+/* Ajuste para que la imagen ocupe la mitad de la sección */
+.cover2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0; /* Elimina el espacio entre imagen y texto */
+    flex-wrap: nowrap; /* Evita que los elementos pasen a una nueva fila */
+    height: 65vh; /* La sección ocupará toda la altura de la ventana */
+    padding: 0; /* Elimina el padding general */
+    background-color: var(--background);
+    margin-bottom: 30px;
+}
+
+/* Imagen */
+.cover-image {
+    flex: 0 0 50%; /* Imagen ocupa el 50% del ancho total */
+    height: 100%; /* Imagen ocupa toda la altura de la sección */
+    overflow: hidden; /* Asegura que no se desborde la imagen */
+}
+
+.cover-image img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 100%; /* La imagen ocupa toda la altura */
+    object-fit: cover; /* Asegura que la imagen no se distorsione */
+}
+
+/* Texto */
+.cover-text {
+    flex: 0 0 50%; /* Texto ocupa el 50% del ancho total */
+    height: 100%; /* Texto ocupa toda la altura de la sección */
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    justify-content: center; /* Centra el texto verticalmente */
+    padding: 50px; /* Espaciado interno */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.cover-text h2 {
+    font-size: 1rem; /* Tamaño del título más grande */
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.cover-text h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.cover-text p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--black);
+    margin-bottom: 23px;
+    text-align: justify;
+}
+
+/* Lista de características */
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--black);
+}
+
+/* Círculo con la palomita */
+.features-list .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 1.25rem;
+    margin-right: 10px;
+}
+
+@media (max-width: 1200px) {
+    .cover2 {
+        flex-direction: column; /* Cambia a diseño vertical */
+        align-items: center; /* Centra los elementos */
+        height: auto; /* Permite que la altura se ajuste al contenido */
+    }
+
+    .cover-image,
+    .cover-text {
+        width: 100%; /* Ambos ocupan todo el ancho disponible */
+    }
+
+    .cover-text {
+        padding: 30px; /* Reduce el padding para pantallas medianas */
+        text-align: center; /* Centra el texto */
+    }
+
+    .cover-text h2 {
+        font-size: 1.2rem; /* Tamaño moderado del título */
+    }
+
+    .cover-text h3 {
+        font-size: 1.7rem; /* Subtítulo ligeramente más pequeño */
+    }
+
+    .cover-text p {
+        font-size: 1rem; /* Texto más legible en pantallas medianas */
+    }
+
+    .features-list li {
+        margin-bottom: 15px; /* Espaciado uniforme */
+    }
+
+    .features-list .circle {
+        width: 24px; /* Tamaño reducido del círculo */
+        height: 24px;
+        font-size: 1.2rem; /* Ícono más pequeño */
+    }
+}
+
+@media (max-width: 768px) {
+    .cover2 {
+        flex-direction: column; /* Cambia a diseño vertical */
+        align-items: center; /* Centra los elementos */
+        height: auto; /* Permite ajuste dinámico */
+    }
+
+    .cover-image {
+        height: 250px; /* Altura fija para mantener la proporción de imagen */
+        object-fit: cover;
+    }
+
+    .cover-text {
+        padding: 20px; /* Reduce padding en pantallas más pequeñas */
+        text-align: center; /* Centra el texto */
+    }
+
+    .cover-text h2 {
+        font-size: 1rem; /* Tamaño más pequeño */
+    }
+
+    .cover-text h3 {
+        font-size: 1.4rem; /* Subtítulo reducido */
+    }
+
+    .cover-text p {
+        font-size: 0.85rem; /* Ajusta tamaño del texto */
+    }
+
+    .features-list li {
+        font-size: 0.85rem; /* Tamaño reducido de fuente */
+        margin-bottom: 12px; /* Espaciado menor */
+    }
+
+    .features-list .circle {
+        width: 20px; /* Tamaño reducido del círculo */
+        height: 20px;
+        font-size: 1rem; /* Ícono más pequeño */
+    }
+}
+
+@media (max-width: 480px) {
+    .cover2 {
+        flex-direction: column;
+        height: auto; /* Altura dinámica para móviles */
+    }
+
+    .cover-image {
+        width: 100%; /* Imagen ocupa todo el ancho disponible */
+        height: 200px; /* Altura ajustada para móviles */
+    }
+
+    .cover-text {
+        padding: 15px; /* Menos padding en móviles */
+    }
+
+    .cover-text h2 {
+        font-size: 0.9rem; /* Tamaño pequeño para móviles */
+    }
+
+    .cover-text h3 {
+        font-size: 1.2rem; /* Subtítulo más pequeño */
+    }
+
+    .cover-text p {
+        font-size: 0.75rem; /* Tamaño reducido para texto */
+    }
+
+    .features-list li {
+        font-size: 0.75rem;
+        margin-bottom: 10px;
+    }
+
+    .features-list .circle {
+        width: 18px;
+        height: 18px;
+        font-size: 0.9rem;
+    }
+}
