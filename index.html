@@ -16,7 +16,6 @@
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <title>ROZCO | Diseño Web, Publicidad y Marketing Digital</title>
-    <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/aboutUS.css">
@@ -53,23 +52,24 @@
             <a href="https://www.facebook.com/share/HCBfjEnsMLV4E5FF/?mibextid=LQQJ4d" target="_blank" class="icon">
                 <i class="ri-facebook-fill"></i>
             </a>
-            <a href="https://www.instagram.com/rozco_services/profilecard/?igsh=MWUxbWwxZjI0cXY3cg==" target="_blank" class="icon">
+            <a href="https://www.instagram.com/rozco_services/profilecard/?igsh=MWUxbWwxZjI0cXY3cg==" target="_blank"
+                class="icon">
                 <i class="ri-instagram-fill"></i>
             </a>
             <a class="icon" id="theme-toggle" style="background-color: transparent;">
                 🌙
             </a>
-            <div class="language-selector">         
+            <div class="language-selector">
                 <a href="index2.html" class="icon" style="background-color: transparent;">
                     <img src="imagenes/USA.png" alt="EN" id="flag-icon">
                 </a>
-            </div>        
+            </div>
         </div>
         <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
     <main>
-        <section class="cover fade-in" id="inicio" style="overflow: hidden;">
+        <section class="cover fade-in" id="inicio">
             <div class="text__information-cover">
                 <h1>Desarrollo Web y Publicidad Digital</h1>
                 <h2 id="dynamic-text">
@@ -125,7 +125,7 @@
 
         </section>
 
-        <section class="servicios" id="servicios" style="overflow: hidden;">
+        <section class="servicios" id="servicios">
             <!-- Título de la sección -->
             <div class="Services-title fade-in">
                 <h2>Nuestros Servicios</h2>
@@ -207,6 +207,21 @@
             </div>
             <!-- Tarjetas de Proyectos -->
             <div class="project-grid fade-in">
+                <div class="project-card" data-category="paginas"
+                    data-images="imagenes/Naves/1.png,imagenes/Naves/2.png,imagenes/Naves/3.png">
+                    <img src="imagenes/Naves/1.png" alt="Desarrollo web" loading="lazy">
+                    <h3>Naves Industriales</h3>
+                    <p>Desarrollo de páginas web para tu negocio, ayudándote a establecer una presencia sólida en
+                        internet. Creamos sitios atractivos, funcionales y adaptados a tus necesidades para destacar en
+                        el mundo digital.</p>
+                    <div class="tools">
+                        <span>Wordpress</span> |
+                        <a href="https://subdominio.rozcodev.com/" target="_blank" rel="noopener noreferrer" class="link">
+                            https://subdominio.rozcodev.com/
+                        </a>
+                    </div>
+                </div>
+
                 <!-- Proyecto 1 -->
                 <div class="project-card" data-category="web"
                     data-images="imagenes/KOUTILAB/koutilab-1.png,imagenes/KOUTILAB/koutilab-2.png,imagenes/KOUTILAB/koutilab-3.png">
@@ -286,17 +301,21 @@
                         <p><i class="ri-mail-fill"></i> contacto@rozcodev.com</p>
                     </div>
                     <div class="links">
-                        <a href="https://www.facebook.com/share/HCBfjEnsMLV4E5FF/?mibextid=LQQJ4d"><i class="ri-facebook-fill"></i></a>
-                        <a href="https://www.instagram.com/rozco_services/profilecard/?igsh=MWUxbWwxZjI0cXY3cg=="><i class="ri-instagram-line"></i></a>
+                        <a href="https://www.facebook.com/share/HCBfjEnsMLV4E5FF/?mibextid=LQQJ4d"><i
+                                class="ri-facebook-fill"></i></a>
+                        <a href="https://www.instagram.com/rozco_services/profilecard/?igsh=MWUxbWwxZjI0cXY3cg=="><i
+                                class="ri-instagram-line"></i></a>
                     </div>
                 </div>
                 <form id="contactForm">
                     <div class="input-box">
-                        <input type="text" id="name" name="name" placeholder="Nombre y apellido" required autocomplete="name">
+                        <input type="text" id="name" name="name" placeholder="Nombre y apellido" required
+                            autocomplete="name">
                         <i class="ri-user-fill"></i>
                     </div>
                     <div class="input-box">
-                        <input type="email" id="email" name="email" required placeholder="Correo electrónico" autocomplete="email">
+                        <input type="email" id="email" name="email" required placeholder="Correo electrónico"
+                            autocomplete="email">
                         <i class="ri-mail-fill"></i>
                     </div>
                     <div class="input-box">
@@ -304,10 +323,11 @@
                         <i class="ri-edit-2-fill"></i>
                     </div>
                     <div class="input-box">
-                        <textarea id="message" name="message" placeholder="Escribe tu mensaje..." autocomplete="off"></textarea>
+                        <textarea id="message" name="message" placeholder="Escribe tu mensaje..."
+                            autocomplete="off"></textarea>
                     </div>
                     <button type="submit" value="enviar">Enviar mensaje</button>
-                </form>                
+                </form>
                 <div id="formMessage"></div>
             </div>
 
@@ -334,4 +354,5 @@
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </body>
+
 </html>

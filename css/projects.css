@@ -118,6 +118,9 @@
     color: var(--cards-text);
 }
 
+.link{
+    color: var(--cards-text);
+}
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 12px rgba(0, 212, 255, 0.3);
